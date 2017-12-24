@@ -1,0 +1,8 @@
+FROM debian
+
+RUN apt-get update && apt-get install -y gcc
+
+RUN mkdir -p /opt/src
+COPY ./src /opt/src
+
+WORKDIR /opt/src

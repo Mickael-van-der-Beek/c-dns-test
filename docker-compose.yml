@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  alpine:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile-alpine
+    volumes:
+      - ./src:/opt/src
+    dns_search:
+      - be
+    command: ./build.sh
+
+  debian:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile-debian
+    volumes:
+      - ./src:/opt/src
+    dns_search:
+      - be
+    command: ./build.sh

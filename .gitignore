@@ -1,0 +1,15 @@
+#
+# Ignore every dot-file
+#
+.*
+
+#
+# Git files that we don't want to ignore even it they are dot-files
+#
+!/.gitignore
+!/.gitmodules
+
+#
+# Ignore compiled files
+#
+*.out
